@@ -20,6 +20,12 @@ const methods = {
       }
     })
   },
+  async templaterm(template_id){
+    await doAction("templaterm",{
+      template_id
+    })
+
+  },
   async templateSetAll(){
     const allTemplates = await api.rpc.get_table_rows({
       code: "atomicassets",
